@@ -5,7 +5,7 @@ let handler = async (m, { conn }) => {
     let json = conn.tebakkata[id][1]
     let ans = json.jawaban.trim()
     let clue = ans.replace(/[AIUEO]/gi, '_')
-    m.reply('```' + clue + '```')
+    await m.reply('```' + clue + '```')
 }
 handler.command = /^teka$/i
 
